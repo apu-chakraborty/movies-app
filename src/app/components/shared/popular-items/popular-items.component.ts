@@ -9,6 +9,7 @@ import { Movie } from 'src/app/models/movie';
 export class PopularItemsComponent {
 
   @Input() items : Movie[] = []
+  
 
 
 }

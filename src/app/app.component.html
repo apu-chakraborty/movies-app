@@ -1,5 +1,10 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
 
-<br><br><br><br><br>
-<app-footer></app-footer>
+  <div class="loader" *ngIf="loader"></div>
+
+  <ng-container *ngIf="!loader">
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+
+    <br /><br />
+    <app-footer></app-footer>
+  </ng-container>

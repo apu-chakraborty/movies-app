@@ -2,12 +2,12 @@
     <a class="item">
       <div class="item-rating">
         <i class="app-icon">star</i>
-        <span>15</span
+        <span>{{itemData.vote_average}}</span
         >/10
       </div>
       <div class="item-image">
         <!-- <img src="https://image.tmdb.org/t/p/w1280/ic8h5oYQWwqQWPyfpZUSomZTdao.jpg" alt="" /> -->
-        <img [src]="'https://image.tmdb.org/t/p/original'+ itemData.backdrop_path" alt="" />
+        <img [src]="'https://image.tmdb.org/t/p/original'+ itemData.poster_path" alt="" />
 
       </div>
       <div class="item-title">{{itemData.title}}</div>
