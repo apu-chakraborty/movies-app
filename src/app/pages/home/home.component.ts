@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.movieService.getMovies().subscribe((res :any) => {
-      this.movies = res
+      this.movies = res.results
       console.log(res)
     })
 

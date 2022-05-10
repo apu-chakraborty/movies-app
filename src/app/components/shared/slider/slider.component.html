@@ -3,7 +3,7 @@
     <ng-container *ngFor="let item of items; let i = index" >
       <div class="slide" *ngIf="i == currentSlide" @sliderFade>
         <div class="slide-bg">
-          <img class="slide-bg-image" src="https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/8e07a611-4ced-4d4e-81e6-d278862c952b/IN-en-20220502-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="" />
+          <img class="slide-bg-image" [src]="'https://image.tmdb.org/t/p/w1280'+ item.backdrop_path" alt="" />
         </div>
         <div class="slide-pane">
           <h2 class="name">{{item.title}}</h2>
@@ -18,7 +18,7 @@
             </div>
           </div>
           <div class="desc mt-6">
-          {{item.title}}
+          {{item.overview}}
           </div>
         </div>
       </div>
