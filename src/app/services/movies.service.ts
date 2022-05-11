@@ -14,5 +14,9 @@ export class MoviesService {
   getMovies(movieType : string = "upcoming") {
    return this.http.get(`${this.baseUrl}/movie/${movieType}?api_key=${this.apiKey}&language=en-US&page=1&include_video=true`);
   }
+
+  getMovie(id : string) {
+    return this.http.get(`${this.baseUrl}/movie/${id}?api_key=${this.apiKey}`);
+   }
 }
 
