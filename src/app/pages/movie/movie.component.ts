@@ -10,7 +10,9 @@ import { MoviesService } from 'src/app/services/movies.service';
 })
 export class MovieComponent implements OnInit {
 
-  movie : Movie | null = null
+  movie : Movie | null = null;
+  movieimages : any =  [];
+  movievideos : any =  []
 
   constructor( private route : ActivatedRoute, private movieService : MoviesService) { }
 
@@ -18,6 +20,8 @@ export class MovieComponent implements OnInit {
     this.route.params.subscribe(({id}) => {
       console.log(id)
       this.getMovieDetails(id)
+      this.getMovieDetailsImages(id)
+      this.getMovieDetailsVideos(id)
     })
   }
 
@@ -25,6 +29,21 @@ export class MovieComponent implements OnInit {
     this.movieService.getMovie(id).subscribe((res :any) => {
       this.movie = res
       console.log(res, "res")
+    })
+  }
+
+
+  getMovieDetailsImages(id:string) {
+    this.movieService.getMovieImages(id).subscribe((res :any) => {
+      this.movieimages = res.posters
+      console.log(res.posters, "res images")
+    })
+  }
+
+  getMovieDetailsVideos(id:string) {
+    this.movieService.getMovieVideos(id).subscribe((res :any) => {
+      this.movievideos = res.results
+      console.log(res, "res videos")
     })
   }
 

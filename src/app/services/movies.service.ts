@@ -18,5 +18,13 @@ export class MoviesService {
   getMovie(id : string) {
     return this.http.get(`${this.baseUrl}/movie/${id}?api_key=${this.apiKey}`);
    }
+
+   getMovieImages(id : string) {
+    return this.http.get(`${this.baseUrl}/movie/${id}/images?api_key=${this.apiKey}`);
+   }
+
+   getMovieVideos(id : string) {
+    return this.http.get(`${this.baseUrl}/movie/${id}/videos?api_key=${this.apiKey}`);
+   }
 }
 

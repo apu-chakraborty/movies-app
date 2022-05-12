@@ -13,6 +13,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopularItemsComponent } from './components/shared/popular-items/popular-items.component';
 import { PopularItemComponent } from './components/shared/popular-item/popular-item.component';
 import { MovieComponent } from './pages/movie/movie.component';
+import {TabViewModule} from 'primeng/tabview';
+import {ImageModule} from 'primeng/image';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { MovieComponent } from './pages/movie/movie.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TabViewModule,
+    ImageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
