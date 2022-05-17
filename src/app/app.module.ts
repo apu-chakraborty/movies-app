@@ -15,6 +15,9 @@ import { PopularItemComponent } from './components/shared/popular-item/popular-i
 import { MovieComponent } from './pages/movie/movie.component';
 import {TabViewModule} from 'primeng/tabview';
 import {ImageModule} from 'primeng/image';
+import { VideoEmbedComponent } from './components/video-embed/video-embed.component';
+import { RecommendedVideosComponent } from './components/recommended-videos/recommended-videos.component';
+import { MovieCreditComponent } from './components/movie-credit/movie-credit.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import {ImageModule} from 'primeng/image';
     SliderComponent,
     PopularItemsComponent,
     PopularItemComponent,
-    MovieComponent
+    MovieComponent,
+    VideoEmbedComponent,
+    RecommendedVideosComponent,
+    MovieCreditComponent
   ],
   imports: [
     BrowserModule,

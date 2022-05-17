@@ -26,5 +26,13 @@ export class MoviesService {
    getMovieVideos(id : string) {
     return this.http.get(`${this.baseUrl}/movie/${id}/videos?api_key=${this.apiKey}`);
    }
+
+   getRecommendedVideos(id : string) {
+    return this.http.get(`${this.baseUrl}/movie/${id}/recommendations?api_key=${this.apiKey}`);
+   }
+
+   getCastings(id : string) {
+    return this.http.get(`${this.baseUrl}/movie/${id}/credits?api_key=${this.apiKey}`);
+   }
 }
 

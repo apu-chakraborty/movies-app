@@ -13,6 +13,7 @@ export class MovieComponent implements OnInit {
   movie : Movie | null = null;
   movieimages : any =  [];
   movievideos : any =  []
+  recomemdedVideos : any =  []
 
   constructor( private route : ActivatedRoute, private movieService : MoviesService) { }
 
@@ -23,6 +24,8 @@ export class MovieComponent implements OnInit {
       this.getMovieDetailsImages(id)
       this.getMovieDetailsVideos(id)
     })
+
+   
   }
 
   getMovieDetails(id:string) {
@@ -35,7 +38,7 @@ export class MovieComponent implements OnInit {
 
   getMovieDetailsImages(id:string) {
     this.movieService.getMovieImages(id).subscribe((res :any) => {
-      this.movieimages = res.posters
+      this.movieimages = res.posters.slice(0, 8)
       console.log(res.posters, "res images")
     })
   }
@@ -46,5 +49,10 @@ export class MovieComponent implements OnInit {
       console.log(res, "res videos")
     })
   }
+
+
+  
+
+  
 
 }
