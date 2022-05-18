@@ -19,7 +19,13 @@ import { VideoEmbedComponent } from './components/video-embed/video-embed.compon
 import { RecommendedVideosComponent } from './components/recommended-videos/recommended-videos.component';
 import { MovieCreditComponent } from './components/movie-credit/movie-credit.component';
 import {CarouselModule} from 'primeng/carousel';
-import { LazyLoadImageModule } from 'ng-lazyload-image'; 
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { SearchMovieComponent } from './components/shared/search-movie/search-movie.component'; 
+import {AutoCompleteModule} from 'primeng/autocomplete';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import {ButtonModule} from 'primeng/button';
+
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -35,7 +41,8 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
     MovieComponent,
     VideoEmbedComponent,
     RecommendedVideosComponent,
-    MovieCreditComponent
+    MovieCreditComponent,
+    SearchMovieComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +52,11 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
     TabViewModule,
     ImageModule,
     CarouselModule,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    AutoCompleteModule,
+    ScrollingModule,
+    FormsModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

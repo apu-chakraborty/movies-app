@@ -35,5 +35,8 @@ export class MoviesService {
    getCastings(id : string) {
     return this.http.get<MovieCredits>(`${this.baseUrl}/movie/${id}/credits?api_key=${this.apiKey}`);
    }
-}
 
+   searchMovie(query : string) {
+    return this.http.get(`${this.baseUrl}/search/keyword?api_key=${this.apiKey}&query=${query}`);
+   }
+}
