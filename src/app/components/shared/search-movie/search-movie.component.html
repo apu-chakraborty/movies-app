@@ -1,0 +1,15 @@
+<!-- <input type="text" (change)="search($event)" /> -->
+
+<p-autoComplete
+  [(ngModel)]="text"
+  [suggestions]="results"
+  (completeMethod)="search($event)"
+></p-autoComplete>
+<button
+  type="button"
+  pButton
+  pRipple
+  icon="pi pi-search"
+  styleClass="p-button-warn"
+  (click)="findbyId('335787')"
+></button>
