@@ -26,3 +26,16 @@ border-radius: 5px;
       }
 
 }
+
+.stat {
+  display: flex;
+  margin-bottom: 15px;
+  .label {
+    width: 150px;
+    font-weight: bold;
+  }
+
+  .value {
+    color: yellow;
+  }
+}

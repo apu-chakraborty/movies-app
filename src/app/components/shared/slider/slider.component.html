@@ -3,7 +3,7 @@
     <ng-container *ngFor="let item of items; let i = index" >
       <div class="slide" *ngIf="i == currentSlide" @sliderFade>
         <div class="slide-bg">
-          <img class="slide-bg-image" [src]="'https://image.tmdb.org/t/p/w1280'+ item.backdrop_path" alt="" />
+          <img class="slide-bg-image" [lazyLoad]="'https://image.tmdb.org/t/p/w1280'+ item.backdrop_path" alt="" />
         </div>
 
         <div class="slide-pane">

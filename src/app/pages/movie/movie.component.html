@@ -3,11 +3,12 @@
 
   <p-tabView>
     <p-tabPanel header="Overview">
+      <ng-container>
       <div class="grid">
         <div class="col-6 md:col-3 lg:col-4">
           <div class="tabimg">
             <img
-              [src]="'https://image.tmdb.org/t/p/w1280' + movie.backdrop_path"
+              [lazyLoad]="'https://image.tmdb.org/t/p/w1280' + movie.backdrop_path"
               alt=""
             />
           </div>
@@ -50,9 +51,12 @@
 
         <!-- <div class="col-6 md:col-3 lg:col-4">Content 1</div> -->
       </div>
+    </ng-container>
     </p-tabPanel>
     <p-tabPanel header="Videos"> 
         <!-- {{movievideos | json}} -->
+      <ng-container>
+
         <div class="grid">
             <div class="col-6 md:col-3 lg:col-3" *ngFor="let movie of movievideos">
         
@@ -64,12 +68,16 @@
                   
             </div>
           </div>
+        </ng-container>
+
     </p-tabPanel>
     <p-tabPanel header="Photos">
+      <ng-container>
+
       <div class="grid">
         <div class="col-6 md:col-3 lg:col-3" *ngFor="let movie of movieimages">
           <p-image
-            [src]="'https://image.tmdb.org/t/p/original' + movie.file_path"
+            [lazyLoad]="'https://image.tmdb.org/t/p/original' + movie.file_path"
            
             alt="Image"
             width="100%"
@@ -77,6 +85,8 @@
           </p-image>
         </div>
       </div>
+    </ng-container>
+
 
       <!-- {{movieimages | json}} -->
     </p-tabPanel>

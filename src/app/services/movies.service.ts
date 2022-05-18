@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http"
+import { MovieCredits } from '../models/movie';
 @Injectable({
   providedIn: 'root'
 })
@@ -32,7 +33,7 @@ export class MoviesService {
    }
 
    getCastings(id : string) {
-    return this.http.get(`${this.baseUrl}/movie/${id}/credits?api_key=${this.apiKey}`);
+    return this.http.get<MovieCredits>(`${this.baseUrl}/movie/${id}/credits?api_key=${this.apiKey}`);
    }
 }
 

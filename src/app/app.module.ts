@@ -18,6 +18,8 @@ import {ImageModule} from 'primeng/image';
 import { VideoEmbedComponent } from './components/video-embed/video-embed.component';
 import { RecommendedVideosComponent } from './components/recommended-videos/recommended-videos.component';
 import { MovieCreditComponent } from './components/movie-credit/movie-credit.component';
+import {CarouselModule} from 'primeng/carousel';
+import { LazyLoadImageModule } from 'ng-lazyload-image'; 
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { MovieCreditComponent } from './components/movie-credit/movie-credit.com
     HttpClientModule,
     BrowserAnimationsModule,
     TabViewModule,
-    ImageModule
+    ImageModule,
+    CarouselModule,
+    LazyLoadImageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

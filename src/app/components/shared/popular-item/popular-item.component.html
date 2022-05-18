@@ -7,7 +7,7 @@
       </div>
       <div class="item-image">
         <!-- <img src="https://image.tmdb.org/t/p/w1280/ic8h5oYQWwqQWPyfpZUSomZTdao.jpg" alt="" /> -->
-        <img [src]="'https://image.tmdb.org/t/p/original'+ itemData.poster_path" alt="" />
+        <img [lazyLoad]="'https://image.tmdb.org/t/p/original'+ itemData.poster_path" alt="" />
 
       </div>
       <div class="item-title">{{itemData.title}}</div>

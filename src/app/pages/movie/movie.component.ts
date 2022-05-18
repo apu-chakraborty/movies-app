@@ -45,7 +45,7 @@ export class MovieComponent implements OnInit {
 
   getMovieDetailsVideos(id:string) {
     this.movieService.getMovieVideos(id).subscribe((res :any) => {
-      this.movievideos = res.results
+      this.movievideos = res.results.slice(0, 8)
       console.log(res, "res videos")
     })
   }

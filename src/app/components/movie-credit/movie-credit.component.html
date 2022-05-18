@@ -1,2 +1,30 @@
-<p>movie-credit works!</p>
-{{casting | json}}
+<div class="container">
+    <div class="center-heading">
+        <h2>Movie Casting</h2>
+
+    </div>
+  <p-carousel
+    [numVisible]="8"
+    [autoplayInterval]="3000"
+    [circular]="true"
+    *ngIf="casting"
+    [value]="casting"
+  >
+    <ng-template let-cast pTemplate="item">
+      <div class="profile_img">
+        <ng-container *ngIf="cast.profile_path !== null">
+          <img
+            [lazyLoad]="'https://image.tmdb.org/t/p/w1280' + cast.profile_path"
+            alt=""
+          />
+        </ng-container>
+
+        <ng-container *ngIf="cast.profile_path == null">
+          <img src="assets/img/noimg.png" alt="" />
+        </ng-container>
+
+        <span> {{ cast.name }}</span>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>

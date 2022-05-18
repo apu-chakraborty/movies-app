@@ -24,8 +24,8 @@ export class MovieCreditComponent implements OnInit {
 
   getCredit(id: string) {
     this.movieService.getCastings(id).subscribe((res: any) => {
-      // console.log(res.results.cast, "eeeeee")
-      this.casting = res.results.cast
+      // console.log(res, "eeeeee")
+      this.casting = res.cast
     })
   }
 
