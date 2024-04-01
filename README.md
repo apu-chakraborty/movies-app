@@ -1,27 +1,43 @@
-# MyApp
+### Movie Home Page
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+![Home Page](./homePage.png)
 
-## Development server
+### Movie Details Page
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![Details Page](./detailspage.png)
 
-## Code scaffolding
+# Movies Website
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Welcome to our Movies Website repository! This project is a dynamic website where users can explore a vast collection of movies, view detailed information about each movie, watch trailers, discover casting details, and receive recommendations based on their preferences.
 
-## Build
+## Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Movies Listing:** Browse through a wide range of movies with ease.
+- **Movie Details:** View comprehensive details about each movie, including synopsis, ratings, and release date.
+- **Casting:** Explore the cast and crew members associated with each movie.
+- **Videos and Photos:** Watch trailers and view photos related to the movies.
+- **Recommendations:** Receive personalized movie recommendations based on your preferences.
 
-## Running unit tests
+## Technologies Used
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Angular: Frontend framework for building dynamic web applications.
+- HTML/CSS/JavaScript: Core technologies for web development.
+- [Insert other technologies used, e.g., Bootstrap, TypeScript, etc.]
 
-## Running end-to-end tests
+## Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+To run this project locally, follow these steps:
 
-## Further help
+1. Clone the repository:
+   https://github.com/apu-chakraborty/movies-app.git
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+2. Navigate to the project directory:
+   `cd movies-app`
+3. Install dependencies:
+4. Start the development server:
+   `ng serve`
+5. Open your web browser and visit http://localhost:4200 to view the website.
+
+## Screenshots
+
+[Insert screenshots of the website here]
