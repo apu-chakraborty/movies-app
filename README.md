@@ -38,6 +38,3 @@ To run this project locally, follow these steps:
    `ng serve`
 5. Open your web browser and visit http://localhost:4200 to view the website.
 
-## Screenshots
-
-[Insert screenshots of the website here]
